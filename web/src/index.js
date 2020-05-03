@@ -4,8 +4,9 @@ import FatalErrorPage from 'src/pages/FatalErrorPage'
 
 import Routes from 'src/Routes'
 
-import './scaffold.css'
+import './fonts.css'
 import './index.css'
+import './scaffold.css'
 
 ReactDOM.render(
   <FatalErrorBoundary page={FatalErrorPage}>
