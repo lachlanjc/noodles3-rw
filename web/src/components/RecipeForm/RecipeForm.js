@@ -4,8 +4,6 @@ import {
   FieldError,
   Label,
   TextField,
-  TextAreaField,
-  // CheckBox,
   Submit,
 } from '@redwoodjs/web'
 
@@ -38,9 +36,7 @@ const RecipeForm = (props) => {
           name="title"
           className={CSS.label}
           errorClassName={CSS.labelError}
-        >
-          Title
-        </Label>
+        />
         <TextField
           name="title"
           defaultValue={props.recipe?.title}
@@ -50,69 +46,103 @@ const RecipeForm = (props) => {
         />
         <FieldError name="title" className={CSS.errorMessage} />
 
-        <Label name="ingredients" className={CSS.label}>
-          Ingredients
-        </Label>
-        <TextAreaField
+        <Label
+          name="ingredients"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
+        <TextField
           name="ingredients"
           defaultValue={props.recipe?.ingredients}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="ingredients" className={CSS.errorMessage} />
 
-        <Label name="instructions" className={CSS.label}>
-          Instructions
-        </Label>
-        <TextAreaField
+        <Label
+          name="instructions"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
+        <TextField
           name="instructions"
           defaultValue={props.recipe?.instructions}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="instructions" className={CSS.errorMessage} />
 
-        <Label name="yield" className={CSS.label}>
-          Yield
-        </Label>
+        <Label
+          name="yield"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
         <TextField
           name="yield"
           defaultValue={props.recipe?.yield}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="yield" className={CSS.errorMessage} />
 
-        <Label name="source" className={CSS.label}>
-          Source
-        </Label>
+        <Label
+          name="source"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
         <TextField
           name="source"
           defaultValue={props.recipe?.source}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="source" className={CSS.errorMessage} />
 
-        <Label name="author" className={CSS.label}>
-          Author
-        </Label>
+        <Label
+          name="author"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
         <TextField
           name="author"
           defaultValue={props.recipe?.author}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="author" className={CSS.errorMessage} />
 
-        <Label name="notes" className={CSS.label}>
-          Notes
-        </Label>
-        <TextAreaField
+        <Label
+          name="notes"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
+        <TextField
           name="notes"
           defaultValue={props.recipe?.notes}
           className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
         />
+        <FieldError name="notes" className={CSS.errorMessage} />
 
-        <Label name="isFavorite" className={CSS.label}>
-          Favorite
-          <TextField
-            type="checkbox"
-            name="isFavorite"
-            defaultValue={props.recipe?.isFavorite}
-            className={CSS.input}
-          />
-        </Label>
+        <Label
+          name="isFavorite"
+          className={CSS.label}
+          errorClassName={CSS.labelError}
+        />
+        <TextField
+          name="isFavorite"
+          defaultValue={props.recipe?.isFavorite}
+          className={CSS.input}
+          errorClassName={CSS.inputError}
+          validation={{ required: true }}
+        />
+        <FieldError name="isFavorite" className={CSS.errorMessage} />
 
         <div className="mt-8 text-center">
           <Submit
