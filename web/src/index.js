@@ -6,7 +6,6 @@ import Routes from 'src/Routes'
 
 import './fonts.css'
 import './index.css'
-import './scaffold.css'
 
 ReactDOM.render(
   <FatalErrorBoundary page={FatalErrorPage}>
