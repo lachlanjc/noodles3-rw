@@ -1,6 +1,7 @@
 {
   "public": true,
+  "cleanUrls": true,
   "redirects": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
