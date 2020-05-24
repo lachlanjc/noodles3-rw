@@ -1,12 +1,13 @@
 import {
+  CheckboxField,
+  FieldError,
+  FileField,
   Form,
   FormError,
-  FieldError,
   Label,
-  TextField,
-  TextAreaField,
-  // CheckBox,
   Submit,
+  TextAreaField,
+  TextField,
 } from '@redwoodjs/web'
 
 const CSS = {
@@ -53,7 +54,9 @@ const RecipeForm = (props) => {
         <Label
           name="description"
           className={CSS.label}
-        />
+        >
+          Description
+        </Label>
         <TextAreaField
           name="description"
           defaultValue={props.recipe?.description}
@@ -118,11 +121,11 @@ const RecipeForm = (props) => {
           name="image"
           className={CSS.label}
           errorClassName={CSS.labelError}
-        />
-        <TextField
+        >
+          Image
+        </Label>
+        <FileField
           name="image"
-          type="file"
-          defaultValue={props.recipe?.image}
           className={CSS.input}
           errorClassName={CSS.inputError}
         />
@@ -130,8 +133,7 @@ const RecipeForm = (props) => {
 
         <Label name="isFavorite" className={CSS.label}>
           Favorite
-          <TextField
-            type="checkbox"
+          <CheckboxField
             name="isFavorite"
             defaultValue={props.recipe?.isFavorite}
             className={CSS.input}
